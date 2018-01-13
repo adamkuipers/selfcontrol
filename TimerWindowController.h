@@ -31,12 +31,17 @@
 	IBOutlet NSTextField* timerLabel_;
 	NSTimer* timerUpdater_;
 	NSDate* blockEndingDate_;
-	NSLock* addToBlockLock;
+	NSLock* modifyBlockLock;
 	int numStrikes;
 	IBOutlet NSButton* addToBlockButton_;
 	IBOutlet NSButton* killBlockButton_;
+
 	IBOutlet NSPanel* addSheet_;
 	IBOutlet NSTextField* addToBlockTextField_;
+    
+    IBOutlet NSPanel* extendBlockTimeSheet_;
+    IBOutlet NSTextField* extendBlockTimeHoursTextField_;
+    IBOutlet NSTextField* extendBlockTimeMinutesTextField_;
 }
 
 // Updates the window's timer display to the correct time remaining until the
@@ -56,9 +61,12 @@
 // to take input for the host to block.
 - (IBAction) addToBlock:(id)sender;
 
+// Called after the block duration has been successfully changed
+- (void) blockDurationUpdated;
+
 // Called by the "Add to Block" sheet if the user clicks the add button, to destroy
 // the sheet and try to add the host to the block.
-- (IBAction) performAdd:(id)sender;
+- (IBAction) performAddSite:(id)sender;
 
 // Delegate method for the sheet.  Just closes the sheet.
 - (void)didEndSheet:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo;
