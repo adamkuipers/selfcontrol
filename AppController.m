@@ -518,10 +518,8 @@ NSString* const kSelfControlErrorDomain = @"SelfControlErrorDomain";
         return;
     }
     NSInteger newBlockDuration = currentBlockDuration + minutesToAdd;
-    
-    NSLog(@"about to set new block duration to %d", newBlockDuration);
-    
-    [NSThread detachNewThreadSelector: @selector(setNewBlockDuration:)
+        
+    [NSThread detachNewThreadSelector: @selector(setBlockDuration:)
                              toTarget: self
                            withObject: @{
                                          @"lock": lock,
@@ -828,7 +826,7 @@ NSString* const kSelfControlErrorDomain = @"SelfControlErrorDomain";
 	[lockToUse unlock];
 }
 
-- (void)setNewBlockDuration:(NSDictionary*)options {
+- (void)setBlockDuration:(NSDictionary*)options {
     NSLock* lock = options[@"lock"];
     NSInteger newDuration = [options[@"duration"] integerValue];
     if(![lock tryLock]) {
@@ -927,7 +925,9 @@ NSString* const kSelfControlErrorDomain = @"SelfControlErrorDomain";
                                  waitUntilDone: YES];
         }
         
-        [timerWindowController_ blockDurationUpdated];
+        [timerWindowController_ performSelectorOnMainThread:@selector(blockDurationUpdated)
+                                                 withObject: nil
+                                              waitUntilDone: YES];
     }
     [lock unlock];
 }

@@ -22,8 +22,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="230" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" id="49">
-                        <rect key="frame" x="46" y="35" width="119" height="17"/>
+                    <textField verticalHuggingPriority="750" misplaced="YES" id="33">
+                        <rect key="frame" x="6" y="60" width="219" height="47"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00:00" id="34">
+                            <font key="font" metaFont="system" size="42"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" misplaced="YES" id="49">
+                        <rect key="frame" x="56" y="35" width="119" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="roundRect" title="Add to Blacklist" bezelStyle="roundedRect" image="buttonCell:50:image" imagePosition="overlaps" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="50">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -39,7 +48,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" misplaced="YES" id="hFS-G4-7mo">
-                        <rect key="frame" x="58" y="11" width="116" height="17"/>
+                        <rect key="frame" x="57" y="11" width="116" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="roundRect" title="Extend Block Timer" bezelStyle="roundedRect" image="buttonCell:AUM-ly-z4i:image" imagePosition="overlaps" alignment="center" controlSize="small" state="on" borderStyle="border" inset="2" id="AUM-ly-z4i">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -60,15 +69,6 @@
                             <action selector="performAddSite:" target="7" id="104"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" misplaced="YES" id="33">
-                        <rect key="frame" x="6" y="60" width="219" height="47"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00:00" id="34">
-                            <font key="font" metaFont="system" size="42"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="138" y="165.5"/>

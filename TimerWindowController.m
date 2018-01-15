@@ -243,9 +243,7 @@
 - (IBAction) performExtendBlock:(id)sender {
     NSInteger extendBlockHours = [extendBlockTimeHoursTextField_ integerValue];
     NSInteger extendBlockMinutes = (extendBlockHours * 60) + [extendBlockTimeMinutesTextField_ integerValue];
-    
-    NSLog(@"perform extend block with %d hours and %d minutes", extendBlockHours, extendBlockMinutes);
-    
+        
     [self.appController extendBlockTime: extendBlockMinutes lock: modifyBlockLock];
     [NSApp endSheet: extendBlockTimeSheet_];
 }
@@ -279,6 +277,7 @@
 
 // see updateTimerDisplay: for an explanation
 - (void)resetStrikes {
+    
 	numStrikes = 0;
 }
 
