@@ -39,7 +39,7 @@
                             <font key="font" metaFont="smallSystem"/>
                         </buttonCell>
                         <connections>
-                            <action selector="performAddSite:" target="7" id="93"/>
+                            <action selector="addToBlock:" target="7" id="cZI-R1-97q"/>
                             <binding destination="77" name="enabled" keyPath="values.BlockAsWhitelist" id="99">
                                 <dictionary key="options">
                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
@@ -66,7 +66,7 @@
                             <font key="font" metaFont="smallSystem"/>
                         </buttonCell>
                         <connections>
-                            <action selector="performAddSite:" target="7" id="104"/>
+                            <action selector="killBlock:" target="7" id="tkl-PL-mUT"/>
                         </connections>
                     </button>
                 </subviews>
@@ -135,7 +135,7 @@ DQ
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="performAddSite:" target="7" id="87"/>
+                            <action selector="closeAddSheet:" target="7" id="npX-02-opf"/>
                         </connections>
                     </button>
                 </subviews>
@@ -225,7 +225,7 @@ DQ
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="performAddSite:" target="7" id="ADc-qW-NV3"/>
+                            <action selector="closeExtendSheet:" target="7" id="hgg-W3-51F"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" misplaced="YES" id="JtO-qm-uy6">

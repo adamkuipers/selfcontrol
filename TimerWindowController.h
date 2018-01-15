@@ -57,6 +57,9 @@
 // Closes the "Add to Block" sheet.
 - (IBAction) closeAddSheet:(id)sender;
 
+// Closes the "Extend Block Time" sheet.
+- (IBAction) closeExtendSheet:(id)sender;
+
 // Called when the "Add to Block" button is clicked, instantiates and runs a sheet
 // to take input for the host to block.
 - (IBAction) addToBlock:(id)sender;

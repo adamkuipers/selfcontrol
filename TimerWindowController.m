@@ -233,6 +233,9 @@
 - (IBAction) closeAddSheet:(id)sender {
 	[NSApp endSheet: addSheet_];
 }
+- (IBAction) closeExtendSheet:(id)sender {
+    [NSApp endSheet: extendBlockTimeSheet_];
+}
 
 - (IBAction) performAddSite:(id)sender {
 	NSString* addToBlockTextFieldContents = [addToBlockTextField_ stringValue];
